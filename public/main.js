@@ -27,3 +27,10 @@ function loadGame (){
   $.ajax({url: "game.html", success: loadContent});
 }
 $("#game_button").click(loadGame);
+
+$('#jam_button').click(function() {
+  $.ajax({url: "jam.html",success: function(result) {
+      $("#jam_content").html(result);
+    }
+  });
+});
